@@ -183,3 +183,7 @@ class C extends Mixin1(Mixin2(S)) {
 } 
 
 new C().foo();
+/*
+上面代码中，每一次混入发生时，都调用了父类的super.foo方法，
+导致父类的同名方法没有被覆盖，行为被保留了下来。
+*/
